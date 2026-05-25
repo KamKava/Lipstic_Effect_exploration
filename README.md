@@ -102,6 +102,7 @@ Relationship between GDP fluctuations and retail structure changes in Europe
 
 ## Project Structure
 
+```text
 Retail_Consumption_Cycles/
 │
 ├── data/
@@ -123,6 +124,7 @@ Retail_Consumption_Cycles/
 │   ├── dashboard.pbix
 │
 ├── README.md
+```
 
 
 
