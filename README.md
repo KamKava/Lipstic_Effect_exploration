@@ -102,27 +102,25 @@ Relationship between GDP fluctuations and retail structure changes in Europe
 
 ## Project Structure
 
-Retail_Consumption_Cycles/
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│
-├── notebooks/
-│   ├── 01_gdp_cleaning.ipynb
-│   ├── 02_sales_cleaning.ipynb
-│   ├── 03_data_integration.ipynb
-│   ├── 03_eda.ipynb
-│   ├── 04_analysis.ipynb
-│
-├── sql/
-│   ├── schema.sql
-│   ├── queries.sql
-│
-├── powerbi/
-│   ├── dashboard.pbix
-│
-├── README.md
+- **data/**
+  - raw/
+  - processed/
+
+- **notebooks/**
+  - 01_gdp_cleaning.ipynb
+  - 02_sales_cleaning.ipynb
+  - 03_data_integration.ipynb
+  - 03_eda.ipynb
+  - 04_analysis.ipynb
+
+- **sql/**
+  - schema.sql
+  - queries.sql
+
+- **powerbi/**
+  - dashboard.pbix
+
+- README.md
 
 
 
