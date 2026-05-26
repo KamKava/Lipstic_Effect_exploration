@@ -32,12 +32,12 @@ Purpose: Represents macroeconomic conditions and economic cycles
 2. Retail Trade Data (Eurostat)
 Source: Eurostat Structural Business Statistics
 Classification: NACE Rev. 2 (Retail Trade – G47 sector)
+
 Selected categories:
 Code	Description	Interpretation
-G47	Total retail trade	Overall retail sector baseline
-G472	Food, beverages & tobacco retail	Essential consumption
-G47_NF_HLTH	Pharmacy & personal care	Semi-essential consumption
-G476	Cultural & recreational goods	Discretionary consumption
+- G47	Total retail trade	Overall retail sector baseline
+- G47_NF_HLTH	Pharmacy & personal care	Semi-essential consumption
+- G476	Cultural & recreational goods	Discretionary consumption
 
 
 ## Tools & Technologies
