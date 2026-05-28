@@ -1,10 +1,10 @@
-# Retail Consumption Cycles: Essential vs Discretionary Spending under Macroeconomic Conditions
+
 
 ## Project Overview
 
 This project analyses how retail consumption patterns respond to macroeconomic conditions across European countries over time.
 
-Instead of focusing on a single product category, the study examines the structure of retail trade, comparing essential and discretionary consumption sectors alongside macroeconomic indicators.
+Instead of focusing on a single product category, it examines the structure of retail trade, comparing essential and discretionary consumption sectors alongside macroeconomic indicators.
 
 The goal is to understand whether different types of retail activity behave differently during periods of economic expansion and slowdown, and whether certain sectors show greater resilience to macroeconomic fluctuations.
 
