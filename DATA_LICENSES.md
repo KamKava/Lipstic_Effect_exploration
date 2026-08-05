@@ -1,6 +1,6 @@
-# Dataset Sources and Licences
+## Dataset Sources and Licences
 
-## 1. GDP and Macroeconomic Indicators
+### GDP Data
 
 Source:
 Eurostat
@@ -8,31 +8,31 @@ Eurostat
 Indicator:
 GDP (chain-linked volumes, 2010 prices)
 
-Dataset:
-GDP by country, measured in CLV10_MEUR (million euro, constant prices)
+Unit:
+CLV10_MEUR (million euro, constant prices)
 
 Licence:
 European Union Open Data Licence (EU ODL)
 
-Purpose:
-Used as an indicator of macroeconomic conditions and economic cycles across European countries.
+Usage:
+Used as a measure of macroeconomic conditions and economic cycles.
 
 
-## 2. Retail Trade Data
+### Retail Trade Data
 
 Source:
 Eurostat Structural Business Statistics
 
-Dataset:
-Retail trade indicators classified under NACE Rev. 2 (Retail Trade – G47 sector)
+Classification:
+NACE Rev. 2
 
-Indicators used:
-- G47: Total retail trade
-- G47_NF_HLTH: Retail trade excluding food, beverages and tobacco (essential retail proxy)
-- G476: Retail sale of cultural and recreation goods (discretionary retail proxy)
+Indicators:
+- G47 - Total retail trade
+- G47_NF_HLTH - Pharmacy and personal care
+- G476 - Cultural and recreational goods
 
 Licence:
-European Union Open Data Licence (EU ODL)
+Eurostat free reuse policy
 
-Purpose:
-Used to compare retail sector performance and investigate whether different retail categories respond differently to economic conditions.
+Usage:
+Used to compare retail sector behaviour across European countries.
