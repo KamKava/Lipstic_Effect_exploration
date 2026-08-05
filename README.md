@@ -143,3 +143,7 @@ More granular sector breakdown (additional NACE levels)
 
 Kamile Kavaliauskaite
 Data Analytics Portfolio Project
+
+
+
+Data was cleaned and analysed using Python (Pandas), with SQL schema design and analytical queries documented for the final dataset.
