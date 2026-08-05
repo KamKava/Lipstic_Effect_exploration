@@ -1,4 +1,4 @@
-country,year,gdp_per_capita,unit
+country,year,gdp,unit
 AL,2016,10420.1,CLV10_MEUR
 AL,2017,10762.2,CLV10_MEUR
 AL,2018,11157.3,CLV10_MEUR

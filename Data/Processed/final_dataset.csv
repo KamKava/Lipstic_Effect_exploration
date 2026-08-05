@@ -1,4 +1,4 @@
-country,year,indicator,sales_value,gdp_per_capita,unit
+country,year,indicator,sales_value,gdp,unit
 AL,2016,G47,65.85000000000001,10420.1,CLV10_MEUR
 AL,2016,G476,67.43333333333334,10420.1,CLV10_MEUR
 AL,2017,G47,66.28333333333333,10762.2,CLV10_MEUR
