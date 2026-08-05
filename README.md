@@ -1,149 +1,188 @@
-
+# Lipstick Effect Exploration: Retail Consumption and Economic Cycles in Europe
 
 ## Project Overview
 
-This project analyses how retail consumption patterns respond to macroeconomic conditions across European countries over time.
+This project explores the relationship between macroeconomic conditions and retail sales across European countries between 2016 and 2025.
 
-Instead of focusing on a single product category, it examines the structure of retail trade, comparing essential and discretionary consumption sectors alongside macroeconomic indicators.
+The analysis investigates whether different retail categories respond differently to economic conditions by comparing:
 
-The goal is to understand whether different types of retail activity behave differently during periods of economic expansion and slowdown, and whether certain sectors show greater resilience to macroeconomic fluctuations.
+- GDP as an indicator of macroeconomic conditions
+- Total retail trade
+- Essential retail proxy categories
+- Discretionary retail categories
 
+The project examines whether observed retail patterns are consistent with the "lipstick effect" hypothesis, where consumers may shift spending behaviour during economic uncertainty.
 
-## Research Question
+The analysis does not attempt to prove the lipstick effect, but evaluates whether retail sector behaviour provides supporting evidence for the hypothesis.
 
-Main Research Question
+---
 
-How does retail consumption behaviour in Europe shift under macroeconomic fluctuations, particularly between essential goods and affordable luxury categories (lipstick effect)?
+# Research Question
 
+## Main Research Question
 
-Comparing essential vs discretionary retail consumption over time in Europe
-Observing whether affordable luxury categories show stability or resilience during downturns
-Relating retail fluctuations to GDP cycles across European countries (pooled Europe view)
-Identifying whether a lipstick effect pattern appears in aggregated European retail data
+How do different retail sectors in Europe respond to changes in macroeconomic conditions, and are observed patterns consistent with the lipstick effect hypothesis?
 
+## Objectives
 
-## Datasets Used
+- Compare retail performance across different NACE Rev. 2 retail categories
+- Examine differences between essential and discretionary consumption patterns
+- Analyse the relationship between GDP changes and retail sales changes
+- Identify whether certain retail sectors show greater resilience during economic fluctuations
 
-1. GDP and Macroeconomic Indicators
-Source: Eurostat
-Indicator: GDP (chain-linked volumes, 2010 prices)
-Unit: CLV10_MEUR (million euro, constant prices)
-Purpose: Represents macroeconomic conditions and economic cycles
-2. Retail Trade Data (Eurostat)
-Source: Eurostat Structural Business Statistics
-Classification: NACE Rev. 2 (Retail Trade – G47 sector)
+---
+
+# Datasets Used
+
+## 1. GDP and Macroeconomic Indicators
+
+**Source:** Eurostat
+
+**Indicator:** GDP (chain-linked volumes, 2010 prices)
+
+**Unit:** CLV10_MEUR (million euro, constant prices)
+
+**Purpose:**  
+Used as an indicator of macroeconomic conditions and economic cycles across European countries.
+
+---
+
+## 2. Retail Trade Data
+
+**Source:** Eurostat Structural Business Statistics
+
+**Classification:** NACE Rev. 2 (Retail Trade - G47 sector)
 
 Selected categories:
-Code	Description	Interpretation
-- G47	Total retail trade	Overall retail sector baseline
-- G47_NF_HLTH	Pharmacy & personal care	Semi-essential consumption
-- G476	Cultural & recreational goods	Discretionary consumption
+
+| Code | Description | Interpretation |
+|---|---|---|
+| G47 | Total retail trade | Overall retail sector baseline |
+| G47_NF_HLTH | Retail trade excluding food, beverages and tobacco | Essential retail proxy |
+| G476 | Retail sale of cultural and recreational goods | Discretionary retail proxy |
+
+---
+
+# Tools & Technologies
+
+- Python (Pandas, NumPy)
+- Matplotlib
+- Seaborn
+- Jupyter Notebook
+- SQL (schema design and analytical queries)
+- Power BI (data visualisation)
+- Git & GitHub (version control)
+
+---
+
+# Data Preparation
+
+The dataset preparation process included:
+
+- Standardising country identifiers and time periods
+- Filtering relevant NACE Rev. 2 retail categories
+- Removing duplicates and invalid records
+- Checking missing values and dataset consistency
+- Aligning GDP and retail data at country-year level
+- Creating sector labels for analysis
+- Engineering growth variables to compare yearly changes
+
+---
+
+# Analytical Approach
+
+The analysis follows three stages:
+
+## 1. Dataset Exploration
+
+- Dataset structure and completeness checks
+- Distribution analysis of GDP and retail sales values
+- Identification of differences between countries and sectors
+- Log transformation to improve comparability across economies
+
+## 2. Retail Sector Comparison
+
+Comparison of:
+
+- Total retail activity
+- Essential retail proxy category
+- Discretionary retail category
+
+Analysis focuses on:
+
+- Average sector performance
+- Variation between categories
+- Stability and volatility differences
+
+## 3. GDP–Retail Relationship
+
+The relationship between economic conditions and retail behaviour is examined through:
+
+- GDP and retail trends over time
+- Correlation analysis
+- GDP growth vs retail sales growth comparisons
+- Cross-country observations
+
+---
+
+# Key Findings
+
+The exploratory analysis suggests:
+
+- GDP and retail sales show a positive overall relationship.
+- Discretionary retail (G476) shows greater variability compared with essential retail categories.
+- Essential retail proxy categories remain comparatively stable over the study period.
+- GDP growth and retail sales growth show a relatively weak short-term relationship, suggesting retail behaviour is influenced by additional factors beyond GDP changes.
+- The findings are consistent with, but do not prove, the lipstick effect hypothesis.
+
+Further statistical modelling would be required to test causality and measure sector sensitivity more precisely.
+
+---
+
+# Project Structure
+├── Data/
+│ ├── Raw/
+│ └── Processed/
+
+├── Notebooks/
+│ |── 01_gdp_cleaning.ipynb
+│ |── 02_sales_cleaning.ipynb
+│ |── 03_data_integration.ipynb
+│ └── 04_eda.ipynb
+
+├── SQL/
+│ ├── schema.sql
+│ └── queries.sql
+
+├── PowerBI/
+│ └── dashboard.pbix
+
+├── requirements.txt
+├── DATA_LICENSES.md
+├── LICENSE
+└── README.md
 
 
-## Tools & Technologies
+---
 
-Python (Pandas, NumPy)
-Matplotlib
-Jupyter Notebook
-Power BI (dashboard development)
-SQL (data storage & querying)
-Git & GitHub (version control)
+# Future Improvements
 
+Potential extensions include:
 
-## Data Cleaning & Preparation
+- Regression modelling to estimate GDP–retail sensitivity
+- More detailed lag analysis between GDP changes and retail responses
+- Inflation-adjusted consumption measures
+- Additional NACE sector breakdowns
+- Expansion to additional regions
 
-Key preprocessing steps include:
+---
 
-Standardisation of country codes and time format
-Filtering relevant NACE Rev. 2 retail categories
-Handling missing and invalid values
-Removing duplicates and ensuring panel consistency
-Converting data into analysis-ready time-series format
-Aligning GDP and retail datasets on country-year level
-Aggregating values where necessary for consistency
-
-
-
-## Analytical Approach
-
-The analysis is structured into three levels:
-
-1. Macroeconomic Context
-GDP trends over time
-Country-level economic cycles
-Growth vs recession periods
-2. Retail Structure Analysis
-Total retail sector (G47)
-Essential vs semi-essential vs discretionary retail
-Category-level trend comparisons
-3. Macro–Retail Relationship
-Correlation between GDP and retail categories
-Sensitivity of consumption to economic cycles
-Cross-country comparisons of retail behaviour
-
-
-
-## Dashboard (Power BI)
-
-The Power BI dashboard includes:
-
-GDP trends across countries and time in Europe
-Retail sector performance (G47 and subcategories)
-Comparison of essential vs discretionary consumption
-Country-level filtering and time-series exploration
-Economic cycle visualisation
-
-
-## Key Insights (to be completed after EDA)
-
-Sensitivity differences between essential and discretionary consumption
-Relationship between GDP fluctuations and retail structure changes in Europe
-
-
-## Project Structure
-
-- **data/**
-  - raw/
-  - processed/
-
-- **notebooks/**
-  - 01_gdp_cleaning.ipynb
-  - 02_sales_cleaning.ipynb
-  - 03_data_integration.ipynb
-  - 03_eda.ipynb
-  - 04_analysis.ipynb
-
-- **sql/**
-  - schema.sql
-  - queries.sql
-
-- **powerbi/**
-  - dashboard.pbix
-
-- README.md
-
-
-
-## Data Sources & Licensing
-
-Eurostat datasets used under the European Union Open Data Licence (EU ODL)
-
-
-## Future Improvements
-
-Inflation-adjusted real consumption indices
-Regression analysis of GDP elasticity
-Lag analysis between GDP and retail response
-Expansion to non-European countries
-Deployment of Power BI dashboard online (Power BI Service)
-More granular sector breakdown (additional NACE levels)
-
-
-## Author
+# Author
 
 Kamile Kavaliauskaite
+
 Data Analytics Portfolio Project
 
+---
 
-
-Data was cleaned and analysed using Python (Pandas), with SQL schema design and analytical queries documented for the final dataset.
+Data preparation and exploratory analysis were performed using Python (Pandas, NumPy, Matplotlib and Seaborn). SQL schema design and analytical queries are included to document the final dataset structure.
